@@ -1,0 +1,12 @@
+﻿Bottleneck description: --------------------
+#1: #Engine - the "for" in WriteLine method is not needed... it prints the message symbol by symbol... no need of it
+
+
+Bug reports: --------------------
+Format: #Bug number - Class name - Bug description
+Example: #1 - PartnerBankingService - The variable "money" at line 36 overflows when you try to add more than 2.1 billion dollars.
+--------
+#1 - #Grade - missing grades
+#2 - #TeacherAddMarkCommand - teacherId and studentId exchanged
+#3 - #Engine - too much depencies form System.Console...
+#4 - #Engine - the "for" in WriteLine is throwing exception out of range and it's not needed - prints the message symbol by symbol

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<students name="All Students">
+  <student>
+    <name>Tester</name>
+    <sex>M</sex>
+    <birthDate>01.01.1999</birthDate>
+    <phone>+359112</phone>
+    <email>tester@test.com</email>
+    <course>first</course>
+    <speciality>special</speciality>
+    <facultyNumber>12345</facultyNumber>
+    <exams>
+      <exam>
+        <name>HCQ2</name>
+        <tutor>someone</tutor>
+        <score>66</score>
+      </exam>
+      <exam>
+        <name>HCQ1</name>
+        <tutor>someone-another</tutor>
+        <score>20</score>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <name>Another-Tester</name>
+    <sex>W</sex>
+    <birthDate>01.01.2000</birthDate>
+    <phone>+359113</phone>
+    <email>tester2@test.com</email>
+    <course>second</course>
+    <speciality>special-special</speciality>
+    <facultyNumber>12346</facultyNumber>
+    <exams>
+      <exam>
+        <name>HCQ2</name>
+        <tutor>someone</tutor>
+        <score>67</score>
+      </exam>
+      <exam>
+        <name>HCQ1</name>
+        <tutor>someone-another</tutor>
+        <score>21</score>
+      </exam>
+    </exams>
+  </student>
+</students>

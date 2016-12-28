@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC3DEFA3-49F0-4FDC-833F-C9C74B791850}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_02_03.Santase</RootNamespace>
+    <AssemblyName>02-03.Santase</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.0\lib\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.0\lib\Mono.Cecil.Mdb.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.0\lib\Mono.Cecil.Pdb.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.0\lib\Mono.Cecil.Rocks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MSTestExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTestExtensions.4.0.0\lib\MSTestExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.engine, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.0\lib\nunit.engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.engine.api, Version=3.0.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.0\lib\nunit.engine.api.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NUnit3.TestAdapter, Version=3.4.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit3TestAdapter.3.4.0\lib\NUnit3.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Santase.Logic\Announce.cs" />
+    <Compile Include="Santase.Logic\Cards\Card.cs" />
+    <Compile Include="Santase.Logic\Cards\CardCollection.cs" />
+    <Compile Include="Santase.Logic\Cards\CardExtensions.cs" />
+    <Compile Include="Santase.Logic\Cards\CardSuit.cs" />
+    <Compile Include="Santase.Logic\Cards\CardType.cs" />
+    <Compile Include="Santase.Logic\Cards\Deck.cs" />
+    <Compile Include="Santase.Logic\Cards\IDeck.cs" />
+    <Compile Include="Santase.Logic\Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Santase.Logic\Extensions\PlayerPositionExtensions.cs" />
+    <Compile Include="Santase.Logic\Extensions\RandomProvider.cs" />
+    <Compile Include="Santase.Logic\GameMechanics\ISantaseGame.cs" />
+    <Compile Include="Santase.Logic\GameMechanics\Round.cs" />
+    <Compile Include="Santase.Logic\GameMechanics\RoundPlayerInfo.cs" />
+    <Compile Include="Santase.Logic\GameMechanics\RoundResult.cs" />
+    <Compile Include="Santase.Logic\GameMechanics\SantaseGame.cs" />
+    <Compile Include="Santase.Logic\GameMechanics\Trick.cs" />
+    <Compile Include="Santase.Logic\GameRulesProvider.cs" />
+    <Compile Include="Santase.Logic\IDeepCloneable{T}.cs" />
+    <Compile Include="Santase.Logic\IGameRules.cs" />
+    <Compile Include="Santase.Logic\InternalGameException.cs" />
+    <Compile Include="Santase.Logic\Logger\ILogger.cs" />
+    <Compile Include="Santase.Logic\Logger\MemoryLogger.cs" />
+    <Compile Include="Santase.Logic\Logger\NoLogger.cs" />
+    <Compile Include="Santase.Logic\PlayerActionValidate\AnnounceValidator.cs" />
+    <Compile Include="Santase.Logic\PlayerActionValidate\ChangeTrumpActionValidator.cs" />
+    <Compile Include="Santase.Logic\PlayerActionValidate\CloseGameActionValidator.cs" />
+    <Compile Include="Santase.Logic\PlayerActionValidate\IAnnounceValidator.cs" />
+    <Compile Include="Santase.Logic\PlayerActionValidate\IPlayerActionValidator.cs" />
+    <Compile Include="Santase.Logic\PlayerActionValidate\PlayCardActionValidator.cs" />
+    <Compile Include="Santase.Logic\PlayerActionValidate\PlayerActionValidator.cs" />
+    <Compile Include="Santase.Logic\PlayerPosition.cs" />
+    <Compile Include="Santase.Logic\Players\BasePlayer.cs" />
+    <Compile Include="Santase.Logic\Players\IPlayer.cs" />
+    <Compile Include="Santase.Logic\Players\PlayerAction.cs" />
+    <Compile Include="Santase.Logic\Players\PlayerActionType.cs" />
+    <Compile Include="Santase.Logic\Players\PlayerDecorator.cs" />
+    <Compile Include="Santase.Logic\Players\PlayerTurnContext.cs" />
+    <Compile Include="Santase.Logic\Players\PlayerWithLoggerDecorator.cs" />
+    <Compile Include="Santase.Logic\Properties\AssemblyInfo.cs" />
+    <Compile Include="Santase.Logic\RoundStates\BaseRoundState.cs" />
+    <Compile Include="Santase.Logic\RoundStates\FinalRoundState.cs" />
+    <Compile Include="Santase.Logic\RoundStates\IStateManager.cs" />
+    <Compile Include="Santase.Logic\RoundStates\MoreThanTwoCardsLeftRoundState.cs" />
+    <Compile Include="Santase.Logic\RoundStates\StartRoundState.cs" />
+    <Compile Include="Santase.Logic\RoundStates\StateManager.cs" />
+    <Compile Include="Santase.Logic\RoundStates\TwoCardsLeftRoundState.cs" />
+    <Compile Include="Santase.Logic\SantaseGameRules.cs" />
+    <Compile Include="Santase.Logic\WinnerLogic\CardWinnerLogic.cs" />
+    <Compile Include="Santase.Logic\WinnerLogic\ICardWinnerLogic.cs" />
+    <Compile Include="Santase.Logic\WinnerLogic\IRoundWinnerPointsLogic.cs" />
+    <Compile Include="Santase.Logic\WinnerLogic\RoundWinnerPoints.cs" />
+    <Compile Include="Santase.Logic\WinnerLogic\RoundWinnerPointsPointsLogic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Santase.Logic\project.json" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Santase.Logic\Santase.Logic.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
